@@ -255,3 +255,37 @@ alert(`your current balance is ${totalNewAvailableBalance}`);
  transactionData.push(data);
 
 }))
+
+//payamount feacher
+;
+document.getElementById("payMoney").addEventListener("click",((e)=>{
+  e.preventDefault();
+    const availableBalance = getInputInnerText("availableBalance");
+ const payAccountNumber= getInputValueNumber("payAccountNumber");
+ const payAmount = getInputValueNumber("payAmount");
+ const payPin = getInputValueNumber("payPin");
+
+ if (!/^\d{11}$/.test(payAccountNumber)) {
+   alert("invalid  number");
+   return;
+ }
+
+ if (payPin != pin) {
+   alert("invalid pin number");
+   return;
+ }
+ const totalNewAvailableBalance = availableBalance - payAmount;
+ if (totalNewAvailableBalance < 0) {
+   alert("you dont have sufficient balance");
+   return;
+ }
+ setInputInnerText(totalNewAvailableBalance);
+ alert(`your current balance is ${totalNewAvailableBalance}`);
+
+ const data={
+name:"Pay Bill",
+date:new Date().toLocaleTimeString()
+ }
+ transactionData.push(data);
+ console.log(transactionData);
+}))
