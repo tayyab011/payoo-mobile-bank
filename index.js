@@ -14,12 +14,11 @@ document.getElementById("loginButton").addEventListener('click',((e)=>{
      alert("invalid");
   } */
 
-     if (!/^\d{11}$/.test(phone) && !/^\d{4}$/.test(pin)) {
-         alert("invalid");
+     if (!/^\d{11}$/.test(phone) || !/^\d{4}$/.test(pinNumber)) {
+       alert("invalid | submit all valid data");
      } else {
-    
-        alert("all matched");
-        window.location.href = "./home.html";
+       alert("all matched");
+       window.location.href = "./home.html";
      } 
 }))
 
