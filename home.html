@@ -30,7 +30,7 @@
     </div>
 
     <div>
-        <button class="btn btn-dark btn-sm md:btn-md"> <span class="rotate-180"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>Log out</button>
+        <button id="logoutBtn" class="btn btn-dark btn-sm md:btn-md"> <span class="rotate-180"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>Log out</button>
     </div>
 
 </div>
@@ -237,7 +237,11 @@
 
 </div>
 
-
+<script>
+  document.getElementById("logoutBtn").addEventListener("click",(()=>{
+    window.location.href="./index.html"
+  }))
+</script>
 
 
 

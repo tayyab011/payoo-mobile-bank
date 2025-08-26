@@ -6,11 +6,20 @@ document.getElementById("loginButton").addEventListener('click',((e)=>{
   const pinNumber = Number(document.getElementById("pinNumber").value);
   
 
-
+/* 
   if (number=== phone && pin === pinNumber) {
     alert("all matched")
     window.location.href='./home.html'
   }else{
      alert("invalid");
-  }
+  } */
+
+     if (!/^\d{11}$/.test(phone) && !/^\d{4}$/.test(pin)) {
+         alert("invalid");
+     } else {
+    
+        alert("all matched");
+        window.location.href = "./home.html";
+     } 
 }))
+
