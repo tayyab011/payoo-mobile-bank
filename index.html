@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <style>
+     :selection {
+  background: #ffcc00; 
+  color: #000;        
+}
+     </style>
+</head>
+<body class="bg-[#f4f5f7] h-[100vh] flex flex-col justify-center items-center">
+<div class="h-[130px] w-[316px]  bg-[url(./assets/bg.png)] bg-cover flex items-center justify-center ">
+    <img src="./assets/Group.png" alt="" >
+</div>
+<form class="border-2 border-purple-600  rounded-2xl p-9">
+<div>
+    <label for="">Mobile Number</label><br>
+    <input type="text" id="phone" placeholder="Phone Number" class="input input-lg border-2 focus:outline-none focus:border-[#0874f2]  bg-[##f4f5f7] mt-3 rounded-full" />
+</div>
+<div class="mt-5">
+    <label for="">4 Digit Pin</label><br>
+    <input type="text" id="pinNumber" placeholder="4 Digit Pin" class="input input-lg border-2 focus:outline-none focus:border-[#0874f2]   bg-[##f4f5f7] mt-3 rounded-full" />
+</div>
+<button class="btn bg-[#0874f2] border-0 hover:scale-120 transition duration-200 text-white mt-5 w-full rounded-full" id="loginButton">Login</button>
+</form>
+
+
+
+<script src="./index.js"></script>
+</body>
+</html>
